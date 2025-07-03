@@ -6,15 +6,15 @@ body-dark-overlay - z-index == 105
 
 ---theme 
 
-2EC4B6
+16425B
 
----orange
+---highlight
 
-FF9F1C
+81c3d7
 
 ---light 
 
-FFBF69
+a0e7fd
 
 --- surface
 
