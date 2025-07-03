@@ -44,15 +44,15 @@
 
 
     /* for theme, buttons and hover effects */
-    --theme-color: #2EC4B6;
-    --light-theme-color: #d8f8fc;
+    --theme-color: #16425B;
+    --light-theme-color: #d4efff;
     /* for backgrounds */
     --surface-color: #E1E1E1;
     /* for disabled */
     --accent-color: #FFBF69;
     /* for icons */
-    --highlight-color: #FF9F1C;
-    --light-highlight-color: #ffe7cb;
+    --highlight-color: #81c3d7;
+    --light-highlight-color: #e0f8ff;
 
 
     /* old code */

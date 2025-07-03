@@ -77,10 +77,10 @@ export default function Navbar() {
                 <div className="hidden ps-10 md:flex justify-between w-full items-center gap-5">
                     {/* nav items */}
                     <ul className="flex sofia-light gap-[27px] lg:gap-[30px] items-center justify-start w-full">
-                        <NavLink to={"/"} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[16px] leading-[150%] px-[10px] py-[20px]`}>Home</NavLink>
-                        <NavLink to={"/about"} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[16px] leading-[150%] px-[10px] py-[20px]`}>About</NavLink>
-                        <NavLink to={"/pricing"} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[16px] leading-[150%] px-[10px] py-[20px]`}>Pricing</NavLink>
-                        <NavLink to={"/contact"} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[16px] leading-[150%] px-[10px] py-[20px]`}>Contact US</NavLink>
+                        <NavLink to={"/"} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[20px] leading-[150%] px-[10px] py-[20px]`}>Home</NavLink>
+                        <NavLink to={"/about"} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[20px] leading-[150%] px-[10px] py-[20px]`}>About</NavLink>
+                        <NavLink to={"/pricing"} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[20px] leading-[150%] px-[10px] py-[20px]`}>Pricing</NavLink>
+                        <NavLink to={"/contact"} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[20px] leading-[150%] px-[10px] py-[20px]`}>Contact US</NavLink>
                     </ul>
                     {/* action buttons */}
 
@@ -130,10 +130,10 @@ export default function Navbar() {
                     </div>
                     {/* nav items */}
                     <ul className="flex sofia-light flex-col gap-5 items-start justify-start w-full">
-                        <NavLink to={"/"} onClick={() => setIsSidebarOpen(false)} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[16px]`}>Home</NavLink>
-                        <NavLink to={"/about"} onClick={() => setIsSidebarOpen(false)} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[16px]`}>About</NavLink>
-                        <NavLink to={"/pricing"} onClick={() => setIsSidebarOpen(false)} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[16px]`}>Pricing</NavLink>
-                        <NavLink to={"/contact"} onClick={() => setIsSidebarOpen(false)} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[16px]`}>Contact US</NavLink>
+                        <NavLink to={"/"} onClick={() => setIsSidebarOpen(false)} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[20px]`}>Home</NavLink>
+                        <NavLink to={"/about"} onClick={() => setIsSidebarOpen(false)} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[20px]`}>About</NavLink>
+                        <NavLink to={"/pricing"} onClick={() => setIsSidebarOpen(false)} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[20px]`}>Pricing</NavLink>
+                        <NavLink to={"/contact"} onClick={() => setIsSidebarOpen(false)} className={({ isActive }) => `${isActive ? "theme-text" : "medium-gray-text"} navitem text-[20px]`}>Contact US</NavLink>
                     </ul>
                     {/* action buttons */}
                     <div className="flex flex-col w-full gap-4">

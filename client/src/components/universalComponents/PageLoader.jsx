@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PageLoader() {
     return (
-        <div className='fixed inset-0 bg-[rgb(27,92,129)] flex items-center justify-center'>
+        <div className='fixed inset-0 bg-[var(--theme-color)] flex items-center justify-center'>
             <div className="flex items-center justify-center  animate-loader absolute h-[190px] w-[190px] md:h-[210px] md:w-[210px] border-t-4 border-red-500 rounded-full">
             </div>
 
