@@ -147,6 +147,7 @@ import House1 from '../assets/icons/house 1.png'
 
 // dashboard icons
 import Logo from '../assets/logo.png'
+import Logo2 from '../assets/logo2.png'
 
 import FileIcon from '../assets/icons/filesIco.png'
 import HomeIcon from '../assets/icons/home.png'
@@ -195,7 +196,7 @@ export const ICONS = {
 
 }
 
-export {
+export { Logo,Logo2,
     HomeBanner, Frame_1, Frame_2, Frame_3, FileTransferColabPic, AuthFrame, CommunityFrame, SettingWheel, PeopleFrame, AboutPageFrame2, AboutPageFrame3, AboutPageFrame4, AboutPageFrame5, Page404Frame, House1,
     // solutions page
     SolutionFrame1, SolutionFrame2, SolutionFrame3, SolutionFrame4, SolutionFrame5, SolutionFrame6, SolutionFrame7, SolutionFrame8, SolutionFrame9, SolutionFrame10,

@@ -1,11 +1,16 @@
 
-import { EmailOutline, Facebook, LocationDot, Msymblol, PhoneOutline, Twitter, Youtube } from '../files'
+import { EmailOutline, Facebook, LocationDot, Logo2, Msymblol, PhoneOutline, Twitter, Youtube } from '../files'
+
+import { Logo } from '../files.js'
 
 export default function Footer() {
   return (
-    <div className="theme-bg">
+    <div className="theme-bg pt-15">
+      <div className="custom-container px-5 md:px-10 lg:px-20">
+        <img src={Logo2} alt="" className='w-[55px]' />
+      </div>
       <div className="custom-container flex flex-col gap-20">
-        <div className='grid grid-cols-12 py-15 px-5 md:px-10 lg:px-20 gap-y-10 sm:gap-5 md:gap-10'>
+        <div className='grid grid-cols-12 pb-15 pt-5 px-5 md:px-10 lg:px-20 gap-y-10 sm:gap-5 md:gap-10'>
 
           {/* col 1 */}
           <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col gap-7 lavender-gray-text order-1">
