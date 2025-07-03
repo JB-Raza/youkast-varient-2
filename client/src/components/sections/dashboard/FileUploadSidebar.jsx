@@ -135,7 +135,7 @@ export default function FileUploadSidebar({ isSidebarOpen, onClose, sidebarOpene
     return (
         <>
             <ProcessingModal isOpen={isProcessing} message="generating shareable links..." />
-            <div ref={sidebarRef} className={`fixed right-0 top-0 h-screen overflow-y-auto z-[210] bg-white shadow-lg shadow-blue-100 min-w-[300px] max-w-[100%] sm:max-w-[500px] w-[450px] transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "translate-x-[150%]"}`}>
+            <div ref={sidebarRef} className={`theme-bg fixed right-0 top-0 h-screen overflow-y-auto z-[210] bg-white shadow-lg shadow-blue-100 min-w-[300px] max-w-[100%] sm:max-w-[500px] w-[450px] transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "translate-x-[150%]"}`}>
 
                 <div className="px-5 py-7">
                     {/* btn to close sidebar */}
@@ -161,7 +161,7 @@ export default function FileUploadSidebar({ isSidebarOpen, onClose, sidebarOpene
 
                             {/* upload and show files */}
                             <div className='relative'>
-                                <label className={`medium-gray-text font-bold`} htmlFor={"files"}>Upload Files</label>
+                                <label className={`text-[var(--surface-color)] font-bold`} htmlFor={"files"}>Upload Files</label>
                                 <div className="rounded-xl mt-3 p-2 w-full h-[300px] border-2 border-neutral-300">
 
                                     <button
@@ -205,12 +205,12 @@ export default function FileUploadSidebar({ isSidebarOpen, onClose, sidebarOpene
                             <div className='mt-5'>
 
                                 {/* sender email */}
-                                <InputBox label="Your Email" type='email' name='senderEmail' handleOnInputChange={handleFilesDataChange} value={filesData.senderEmail || ""} placeholderText='email@example.com' labelClassName={"text-[15px]"} className={"!mt-0"} />
+                                <InputBox label="Your Email" type='email' name='senderEmail' handleOnInputChange={handleFilesDataChange} value={filesData.senderEmail || ""} placeholderText='email@example.com' labelClassName={"text-[15px] !text-[var(--surface-color)]"} className={"!mt-0"} />
                                 {/* recepient email */}
-                                <InputBox label="Recepient's Email" type='email' name='recepientEmail' handleOnInputChange={handleFilesDataChange} value={filesData.recepientEmail || ""} placeholderText='email@example.com' labelClassName={"text-[15px]"} />
+                                <InputBox label="Recepient's Email" type='email' name='recepientEmail' handleOnInputChange={handleFilesDataChange} value={filesData.recepientEmail || ""} placeholderText='email@example.com' labelClassName={"text-[15px] !text-[var(--surface-color)]"} />
                                 {/* retention */}
                                 <div className="flex flex-col gap-y-3 mt-7">
-                                    <label className={`medium-gray-text font-bold`} htmlFor={"retention"}>Retention</label>
+                                    <label className={`!text-[var(--surface-color)] font-bold`} htmlFor={"retention"}>Retention</label>
                                     <select name="retention" id="retention"
                                         value={filesData.retention || "5"}
                                         onChange={handleFilesDataChange}
@@ -229,25 +229,25 @@ export default function FileUploadSidebar({ isSidebarOpen, onClose, sidebarOpene
                                 {/* Protect with password */}
                                 <div>
                                     <div className="flex justify-between gap-x-5 mt-8">
-                                        <h4 className={`medium-gray-text text-[16px] inter-font font-bold`} htmlFor={"message"}>Protect with Password</h4>
+                                        <h4 className={`!text-[var(--surface-color)] text-[16px] inter-font font-bold`} htmlFor={"message"}>Protect with Password</h4>
                                         {/* checkmark  */}
                                         <button
                                             onClick={() => {
                                                 setIsPasswordProtected(prev => !prev)
                                                 setFilesData(prev => ({ ...prev, password: "" }))
                                             }}
-                                            className={` cursor-pointer flex items-center transition-all duration-200 ${isPasswordProtected ? "theme-bg" : "bg-[#D9D9D9]"} px-[1px] h-[24px] w-[44px] rounded-full`}>
+                                            className={` cursor-pointer flex items-center transition-all duration-200 ${isPasswordProtected ? "highlight-bg" : "bg-[#D9D9D9]"} px-[1px] h-[24px] w-[44px] rounded-full`}>
                                             <p className={`h-[20px] w-[20px] rounded-full transition-all duration-200 ${isPasswordProtected ? "translate-x-[100%]" : ""} bg-white`}></p>
                                         </button>
                                     </div>
-                                    {isPasswordProtected && <InputBox label="Set Password" type='password' name='password' handleOnInputChange={handleFilesDataChange} value={filesData.password || ""} placeholderText='password@123' labelClassName={"text-[15px]"} />}
+                                    {isPasswordProtected && <InputBox label="Set Password" type='password' name='password' handleOnInputChange={handleFilesDataChange} value={filesData.password || ""} placeholderText='password@123' labelClassName={"text-[15px] !text-[var(--surface-color)]"} />}
 
                                 </div>
 
 
                                 {/* message */}
                                 <div className={`flex flex-col gap-2 mt-4 sm:mt-8`}>
-                                    <label className={`medium-gray-text font-bold`} htmlFor={"message"}>Message</label>
+                                    <label className={`!text-[var(--surface-color)] font-bold`} htmlFor={"message"}>Message</label>
                                     <textarea name="message" id="message"
                                         rows={5}
                                         value={filesData.message || ""}
@@ -260,20 +260,20 @@ export default function FileUploadSidebar({ isSidebarOpen, onClose, sidebarOpene
 
                             {/* show links generated */}
                             {shareableLinks.length > 0 && <div className='mt-15'>
-                                <h4 className="inter-font font-semibold text-neutral-800 mb-4">Generated Links</h4>
+                                <h4 className="inter-font font-semibold text-[var(--surface-color)] mb-4">Generated Links</h4>
                                 <div className="flex gap-2 justify-center sm:gap-4 flex-wrap">
 
                                     {shareableLinks?.map((link) => (
-                                        <div key={link.url} className='flex justify-between group border-[1px] rounded-md border-neutral-300 px-3 py-1.5 w-min gap-x-5'>
+                                        <div key={link.url} className='flex justify-between group border-[1px] rounded-md border-[var(--highlight-color)] px-3 py-1.5 w-min gap-x-5'>
 
-                                            <p title='Link' className='text-blue-500 w-[320px] max-w-[320px] cursor-pointer text-nowrap truncate'>{link.filename}</p>
+                                            <p title='Link' className='text-blue-400 w-[320px] max-w-[320px] cursor-pointer text-nowrap truncate'>{link.filename}</p>
                                             <button
                                                 title='copy link'
                                                 onClick={() => {
                                                     navigator.clipboard.writeText(link.url)
                                                     toast.success("Link Copied!")
                                                 }}
-                                                className='invisible group-hover:visible'><FontAwesomeIcon icon={faCopy} className='text-neutral-500 hover:text-neutral-800 cursor-pointer' /></button>
+                                                className='invisible group-hover:visible'><FontAwesomeIcon icon={faCopy} className='text-[var(--surface-color)] hover:text-white cursor-pointer' /></button>
                                         </div>
                                     ))}
                                 </div>
@@ -290,7 +290,7 @@ export default function FileUploadSidebar({ isSidebarOpen, onClose, sidebarOpene
                                 disabled={filesData && filesData?.files?.length > 0 ? false : true}
                                 onClick={handleFilesSubmit}
                                 content={"Generate"}
-                                className={"w-full mt-10 disabled:opacity-50 disabled:!bg-[var(--theme-color)] disabled:hover:text-white disabled:cursor-default"} />
+                                className={"w-full mt-10 disabled:opacity-50 !bg-[var(--highlight-color)] disabled:!bg-[var(--highlight-color)] disabled:hover:text-white disabled:cursor-default"} />
                         </div>
                     </div>
                 </div>
