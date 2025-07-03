@@ -1,0 +1,181 @@
+/* inter font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+/* DM sans */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+@import "tailwindcss";
+
+body {
+    font-family: "Inter", sans-serif !important;
+}
+
+/* color pallete */
+.theme-text {
+    color: var(--theme-color);
+}
+
+.theme-bg {
+    background-color: var(--theme-color);
+}
+
+.highlight-bg {
+    background-color: var(--highlight-color);
+}
+
+.highlight-text {
+    color: var(--highlight-color);
+}
+
+
+.inter-font {
+    font-family: "Inter", sans-serif !important;
+}
+
+.dashboard-nav {
+    position: relative;
+}
+
+.hoverDashNav {
+    position: relative;
+}
+
+.hoverDashNav:hover::before {
+    width: 100% !important;
+}
+
+.custom-select {
+    appearance: none;
+    background-image: url("./assets/icons/angle-down-dark.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 13px;
+}
+
+.hoverDashNav::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    left: 0px;
+    transition: width 0.4s ease;
+    background-color: var(--theme-purple);
+    height: 3px;
+}
+
+.dash-navs {
+    position: relative;
+}
+
+
+.dm-sans-font {
+    font-family: "DM Sans", sans-serif;
+}
+
+.custom-container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+.body-dark-overlay:before {
+    content: "";
+    position: absolute;
+    z-index: 100;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a0aec0;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #718096;
+}
+
+
+/* DataTables custom */
+/* paginator rowsPerPageOptions */
+.p-custom-paginator .p-dropdown {
+    @apply rounded-md flex items-center gap-3 justify-center px-4 py-1 bg-neutral-100 shadow-lg;
+}
+
+.p-dropdown-panel {
+    @apply rounded-md shadow-md bg-white px-3 py-2
+}
+
+.p-paginator-pages {
+    @apply flex flex-wrap gap-4 items-center justify-center;
+}
+
+/* pagination paginators */
+.p-paginator {
+    @apply flex flex-wrap gap-4 items-center justify-center;
+}
+
+.p-paginator-page {
+    @apply rounded-full w-[25px] h-[25px];
+}
+
+/* active page */
+.p-paginator .p-highlight {
+    @apply bg-neutral-300 rounded-full flex items-center justify-center w-[25px] h-[25px];
+}
+
+/* buttons to navigate pages */
+.p-paginator-prev,
+.p-paginator-next {
+    @apply hover:bg-gray-200 p-2 rounded-full text-gray-600;
+}
+
+.p-paginator-first,
+.p-paginator-last {
+    @apply hover:bg-gray-200 p-2 rounded-full text-gray-600;
+}
+
+.p-disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.p-tooltip {
+    @apply bg-white border-1 border-neutral-300 shadow-md text-[12px] px-1 py-0.5
+}
+
+
+/* animations */
+.animate-loader {
+    animation: loaderAnimation 1s linear infinite;
+}
+
+.animate-loader-reverse {
+    animation: loaderAnimation 1s linear infinite reverse;
+}
+
+/* loader animation */
+@keyframes loaderAnimation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* doc viewer */

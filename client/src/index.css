@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+
+@theme {
+    --breakpoint-xs: 400px;
+}
+
+@font-face {
+    font-family: SofiaProBlack;
+    src: url("../sofia-pro/Sofia Pro Black Az.otf");
+}
+
+@font-face {
+    font-family: SofiaProBold;
+    src: url("../sofia-pro/Sofia\ Pro\ Bold\ Az.otf");
+}
+
+@font-face {
+    font-family: SofiaProMedium;
+    src: url("../sofia-pro/Sofia\ Pro\ Medium\ Az.otf");
+}
+
+@font-face {
+    font-family: SofiaProRegular;
+    src: url("../sofia-pro/Sofia\ Pro\ Regular\ Az.otf");
+}
+
+@font-face {
+    font-family: SofiaProLight;
+    src: url("../sofia-pro/Sofia\ Pro\ Light\ Az.otf");
+}
+
+
+
+
+:root {
+    /* sofia pro font */
+    --sofia-pro-black: SofiaProBlack;
+    --sofia-pro-bold: SofiaProBold;
+    --sofia-pro-medium: SofiaProMedium;
+    --sofia-pro-regular: SofiaProRegular;
+    --sofia-pro-light: SofiaProLight;
+
+
+
+    /* for theme, buttons and hover effects */
+    --theme-color: #2EC4B6;
+    --light-theme-color: #d8f8fc;
+    /* for backgrounds */
+    --surface-color: #E1E1E1;
+    /* for disabled */
+    --accent-color: #FFBF69;
+    /* for icons */
+    --highlight-color: #FF9F1C;
+    --light-highlight-color: #ffe7cb;
+
+
+    /* old code */
+    --theme-purple: #651FFF;
+    --light-sky-blue: #E0F7FA;
+    /* gray */
+    --light-gray: #F4F5F6;
+    --lavender-gray: #E2E4E9;
+    --cool-gray: #838696;
+    --medium-gray: #5C5F6E;
+    --blackish-gray: #0B0D0E;
+
+    --bright-cyan: #00E5FF;
+    --deep-navy: #1A284E;
+    --heading-one: clamp(40px, 5vw, 64px);
+    --heading-two: clamp(35px, 4.5vw, 56px);
+    --heading-three: clamp(30px, 4vw, 48px);
+    --heading-four: clamp(27px, 3.7vw, 42px);
+    --heading-five: clamp(20px, 2.35vw, 36px);
+    --heading-six: clamp(17px, 1.6vw, 24px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--sofia-pro-bold);
+}
+
+.navitem {
+    font-family: var(--sofia-pro-light);
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    text-align: center;
+}
+
+.navitem:hover {
+    color: var(--theme-color) !important;
+
+}
+
+.navitem::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0px;
+    left: 0px;
+    transition: width 0.4s ease;
+    background-color: var(--theme-color);
+    height: 3px;
+}
+
+.navitem:hover::before {
+    width: 100% !important;
+}
+
+/* headings */
+.heading-1 {
+    font-size: var(--heading-one);
+    line-height: clamp(50px, 6vw, 76px);
+}
+
+.heading-2 {
+    font-size: var(--heading-two);
+    line-height: clamp(35px, 4.5vw, 56px);
+}
+
+.heading-3 {
+    font-size: var(--heading-three);
+    line-height: clamp(30px, 4vw, 48px);
+}
+
+.heading-4 {
+    font-size: var(--heading-four);
+    line-height: clamp(27px, 3.7vw, 42px);
+}
+
+.heading-5 {
+    font-size: var(--heading-five);
+    line-height: clamp(20px, 2vw, 36px);
+}
+
+.heading-6 {
+    font-size: var(--heading-six);
+    line-height: clamp(18px, 1.6vw, 28px);
+}
+
+
+textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+.body-backdrop-blur {
+    backdrop-filter: blur(5px);
+}
+
+.body-dark-overlay:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 105 !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+
+/* font families */
+
+.sofia-black {
+    font-family: var(--sofia-pro-black), sans-serif;
+}
+
+.sofia-bold {
+    font-family: var(--sofia-pro-bold), sans-serif;
+}
+
+.sofia-medium {
+    font-family: var(--sofia-pro-medium), sans-serif;
+}
+
+.sofia-regular {
+    font-family: var(--sofia-pro-regular), sans-serif;
+}
+
+.sofia-light {
+    font-family: var(--sofia-pro-light), sans-serif;
+}
+
+/* end of font families */
+
+
+.custom-container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+/* colors */
+.medium-gray-text {
+    color: var(--medium-gray);
+}
+
+.cool-gray-text {
+    color: var(--cool-gray)
+}
+
+.light-gray-text {
+    color: var(--light-gray);
+}
+
+.lavender-gray-text {
+    color: var(--lavender-gray);
+}
+
+.theme-purple {
+    color: var(--theme-purple);
+}
+
+.blackish-gray-text {
+    color: var(--blackish-gray);
+}
